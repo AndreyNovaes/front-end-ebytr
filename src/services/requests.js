@@ -4,7 +4,7 @@ const URL = process.env.REACT_APP_URL;
 const PORT = process.env.REACT_APP_PORT;
 
 const api = axios.create({
-  baseURL: `${URL}:${PORT}`,
+  baseURL: `${URL}:${PORT}/tasks`,
 });
 
 export const getAll = async (query) => {
