@@ -1,9 +1,10 @@
 import axios from 'axios';
 
-// const dotenv = require('dotenv');
+const URL = process.env.REACT_APP_URL;
+const PORT = process.env.REACT_APP_PORT;
 
 const api = axios.create({
-  baseURL: `http://localhost:${process.env.API_PORT || 3001}/tasks`,
+  baseURL: `${URL}:${PORT}`,
 });
 
 export const getAll = async (query) => {
